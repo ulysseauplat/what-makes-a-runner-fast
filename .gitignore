@@ -1,6 +1,7 @@
-analisi.md
+# Course materials (not part of project submission)
+lessons/
 
-# Data files (too large for git)
+# Data files
 data/raw/
 data/processed/
 
@@ -11,3 +12,6 @@ __pycache__/
 
 # OS
 .DS_Store
+
+# Presentation build output (large binary files)
+presentation/

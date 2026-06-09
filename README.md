@@ -9,7 +9,6 @@ A multi-modal data visualization study of the physiological, environmental, and 
 ## Research Questions
 
 1. Does age determine peak running performance? At what age are runners fastest?
-2. Do men and women pace themselves differently across a marathon?
 3. How much does race-day temperature affect finish times?
 4. Which countries produce the fastest recreational runners?
 5. Have finish times changed over the past 20 years despite surging participation?
@@ -32,16 +31,15 @@ A multi-modal data visualization study of the physiological, environmental, and 
 
 ## Visualizations
 
-| Chart | File | What it shows |
-|-------|------|---------------|
-| 1 | `01_age_vs_time.png` | Age vs finish time — peak performance at ~30–33 y (LOESS + scatter) |
-| 2 | `02_pacing_gender.png` | First vs second half pace by gender — women run more evenly |
-| 3 | `03_temp_vs_time.png` | Temperature vs finish time — regression with 95% CI |
-| 4 | `04_choropleth_country.png` | World map of median finish time by runner nationality |
-| 5 | `05_year_trend.png` | Median finish times 2000–2019 with participation count |
-| 6 | `06_training_bubble.png` | Training volume vs finish time — bubble chart (Strava data) |
-| 7 | `07_finish_distribution.png` | Finish time distribution by gender — histogram + KDE |
-| 8 | `08_predictor_correlations.png` | Pearson r for each factor vs finish time |
+| Chart | File | Research question |
+|-------|------|-------------------|
+| 1 | `01_age_vs_time.png` | Q1 — Age vs finish time: peak performance at ~30–33 y (LOESS + scatter) |
+| 3 | `03_temp_vs_time.png` | Q3 — Temperature vs finish time: regression with 95% CI |
+| 4 | `04_choropleth_country.png` | Q4 — Weekly training volume by runner nationality (world map) |
+| 5 | `05_year_trend.png` | Q5 — Median finish times 2000–2019 with participation count |
+| 6 | `06_training_bubble.png` | Q6 — Training volume vs finish time: bubble chart (Strava data) |
+| 7 | `07_finish_distribution.png` | Q7 — Finish time distribution by gender: histogram + KDE |
+| — | `08_predictor_correlations.png` | Summary — Pearson r for each factor vs finish time |
 
 ---
 
@@ -63,7 +61,6 @@ what-makes-a-runner-fast/
 │   └── 05_visualizations.ipynb
 ├── charts/                 # Exported PNG charts (150 dpi)
 │   ├── 01_age_vs_time.png
-│   ├── 02_pacing_gender.png
 │   ├── 03_temp_vs_time.png
 │   ├── 04_choropleth_country.png
 │   ├── 05_year_trend.png
@@ -113,7 +110,12 @@ Run `01` → `02` → `03` → `04` → `05`.
 
 ## Key Findings
 
-*(Populated after running all notebooks)*
+- **Age** — performance peaks at 28–34; non-linear decline accelerates sharply past 50
+- **Weather** — race-day temperature is the strongest external predictor (Pearson r = 0.23–0.24); each extra °C adds ~3 min to the median finish time
+- **Training volume** — surprisingly weak predictor (r = 0.06); raw km/week explains little of the individual variance
+- **Trends** — median finish times barely changed 2000–2019 despite participation nearly doubling
+- **Gender** — men 4h22m vs women 4h49m at the median; both distributions are strongly right-skewed
+- **Running culture** — Strava data shows Peru, Canada, and Central Europe log the most weekly km among marathon-targeting athletes
 
 ---
 
