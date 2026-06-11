@@ -78,7 +78,7 @@ what-makes-a-runner-fast/
 ### 1. Install dependencies
 
 ```bash
-pip install pandas matplotlib seaborn requests geopandas plotly scipy numpy jupyter
+pip install pandas matplotlib requests geopandas scipy numpy jupyter
 ```
 
 ### 2. Download the data
@@ -125,9 +125,7 @@ Run `01` → `02` → `03` → `04` → `05`.
 |---------|---------|---------|
 | pandas | ≥2.0 | Data loading, cleaning, merging |
 | matplotlib | ≥3.7 | Core plotting |
-| seaborn | ≥0.12 | Statistical charts |
 | requests | ≥2.28 | Open-Meteo API calls |
 | geopandas | ≥0.13 | Choropleth world map |
-| plotly | ≥5.14 | Interactive choropleth |
 | scipy | ≥1.10 | Regression, KDE, statistical tests |
 | numpy | ≥1.24 | Numerical operations |

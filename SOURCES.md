@@ -8,9 +8,9 @@
 - **License:** Creative Commons Attribution 4.0 International
 - **Format:** CSV (~353 MB)
 - **Coverage:** 10 major US marathons, individual runner results
-- **Key columns:** name, age, gender, finish_time, half_split, race, city, year
+- **Key columns:** name, age, gender, finish_time, race, city, year
 
-## Dataset 2 — Long-Distance Running Athlete Biometrics
+## Dataset 2 — Strava Weekly Training Logs
 
 - **Title:** Long Distance Running Dataset
 - **Source:** Kaggle
@@ -18,8 +18,8 @@
 - **URL:** https://kaggle.com/datasets/mexwell/long-distance-running-dataset
 - **License:** Open Database License (ODbL)
 - **Format:** CSV
-- **Coverage:** 36,412 athletes worldwide
-- **Key columns:** athlete_id, vo2max, weight_kg, height_cm, weekly_km, best_marathon
+- **Coverage:** 36,412 marathon-targeting athletes worldwide, one row per athlete-week of 2019
+- **Key columns:** datetime, athlete, distance, duration, gender, age_group, country, major
 
 ## Dataset 3 — Race-Day Weather
 
