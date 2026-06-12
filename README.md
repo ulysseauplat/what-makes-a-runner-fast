@@ -22,7 +22,7 @@ A multi-modal data visualization study of the physiological, environmental, and 
 | # | Dataset | Source | Format | Key variables |
 |---|---------|--------|--------|---------------|
 | 1 | Marathon Results 2000–2019 (10 major US races, 2.85M finishers) | [Zenodo 6959864](https://zenodo.org/record/6959864) | CSV (~353 MB) | finish time, age, gender, city, year |
-| 2 | Strava training data — 36,412 athletes worldwide | [Kaggle: mexwell/long-distance-running-dataset](https://kaggle.com/datasets/mexwell/long-distance-running-dataset) | CSV | weekly km, nationality, target marathon |
+| 2 | Strava training data — 36,412 athletes worldwide (weekly file `run_ww_2019_w.csv` only; the dataset's other files are unused) | [Kaggle: mexwell/long-distance-running-dataset](https://kaggle.com/datasets/mexwell/long-distance-running-dataset) | CSV (~149 MB) | weekly km, nationality, target marathon |
 | 3 | Race-day weather (temperature, precipitation, wind) | [Open-Meteo API](https://open-meteo.com) (free, no key) | JSON / REST API | temp_mean_c, precip_mm, wind_kmh |
 
 **Integration:** Dataset 2 is joined to Dataset 1 at group level on `(gender × age group × city × year)` using the athlete's `major` field. Dataset 3 is joined on `(city, race_date)`.
@@ -78,25 +78,16 @@ what-makes-a-runner-fast/
 ### 1. Install dependencies
 
 ```bash
-pip install pandas matplotlib requests geopandas scipy numpy jupyter
+pip install pandas matplotlib requests geopandas scipy numpy jupyter kaggle plotly
 ```
 
-### 2. Download the data
+### 2. Set the Kaggle token (one-time)
 
-**Dataset 1 — Marathon results (Zenodo):**
+Create an API token at kaggle.com → Settings → API, then:
+
 ```bash
-# Download manually from https://zenodo.org/record/6959864
-# Place the CSV file(s) in data/raw/marathon/
+export KAGGLE_API_TOKEN=<your-token>   # add to ~/.bashrc to persist
 ```
-
-**Dataset 2 — Strava training data (Kaggle):**
-```bash
-# Requires Kaggle CLI: pip install kaggle
-# Place kaggle.json in ~/.kaggle/
-kaggle datasets download -d mexwell/long-distance-running-dataset -p data/raw/athletes/ --unzip
-```
-
-**Dataset 3 — Weather:** Fetched automatically in `03_weather_fetch.ipynb` via the Open-Meteo API.
 
 ### 3. Run notebooks in order
 
@@ -105,6 +96,8 @@ jupyter notebook notebooks/
 ```
 
 Run `01` → `02` → `03` → `04` → `05`.
+
+Notebook `01` downloads both raw datasets automatically if missing (marathon results from Zenodo, `run_ww_2019_w.csv` from Kaggle). Weather is fetched in `03` from the Open-Meteo API (no key needed).
 
 ---
 
@@ -127,5 +120,7 @@ Run `01` → `02` → `03` → `04` → `05`.
 | matplotlib | ≥3.7 | Core plotting |
 | requests | ≥2.28 | Open-Meteo API calls |
 | geopandas | ≥0.13 | Choropleth world map |
+| plotly | ≥5.0 | Interactive choropleth (notebook 05) |
 | scipy | ≥1.10 | Regression, KDE, statistical tests |
 | numpy | ≥1.24 | Numerical operations |
+| kaggle | ≥2.0 | Automated dataset download (notebook 01) |
