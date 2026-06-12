@@ -34,12 +34,12 @@ A multi-modal data visualization study of the physiological, environmental, and 
 | Chart | File | Research question |
 |-------|------|-------------------|
 | 1 | `01_age_vs_time.png` | Q1 — Age vs finish time: peak performance at ~30–33 y (LOESS + scatter) |
-| 3 | `03_temp_vs_time.png` | Q3 — Temperature vs finish time: regression with 95% CI |
-| 4 | `04_choropleth_country.png` | Q4 — Weekly training volume by runner nationality (world map) |
-| 5 | `05_year_trend.png` | Q5 — Median finish times 2000–2019 with participation count |
-| 6 | `06_training_bubble.png` | Q6 — Training volume vs finish time: bubble chart (Strava data) |
-| 7 | `07_finish_distribution.png` | Q7 — Finish time distribution by gender: histogram + KDE |
-| — | `08_predictor_correlations.png` | Summary — Pearson r for each factor vs finish time |
+| 2 | `03_temp_vs_time.png` | Q3 — Temperature vs finish time: regression with 95% CI |
+| 3 | `04_choropleth_country.png` | Q4 — Weekly training volume by runner nationality (world map) |
+| 4 | `05_year_trend.png` | Q5 — Median finish times 2000–2019 with participation count |
+| 5 | `06_training_bubble.png` | Q6 — Training volume vs finish time: bubble chart (Strava data) |
+| 6 | `07_finish_distribution.png` | Q7 — Finish time distribution by gender: histogram + KDE |
+| 7 | `08_predictor_correlations.png` | Summary — Pearson r for each factor vs finish time |
 
 ---
 
