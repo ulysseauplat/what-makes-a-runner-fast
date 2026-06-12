@@ -1,4 +1,4 @@
-# Course materials (not part of project submission)
+# Course materials
 lessons/
 
 # Data files
@@ -13,5 +13,4 @@ __pycache__/
 # OS
 .DS_Store
 
-# Presentation build output (large binary files)
 presentation/
